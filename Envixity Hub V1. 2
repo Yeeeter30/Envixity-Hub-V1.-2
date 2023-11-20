@@ -1,0 +1,245 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Envixity Hub V1.2",
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by yeeeter30",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "https://discord.com/invite/YvMdVDRtgH", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Input key",
+      Subtitle = "Key System",
+      Note = "Join Discord to get key",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"696969","sussyballs"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("Player", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Player")
+
+Rayfield:Notify({
+   Title = "Script executed",
+   Content = "Notification Content: the script was executed",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local Input = Tab:CreateInput({
+   Name = "WalkSpeed",
+   PlaceholderText = "Input Number",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(WS)
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WS
+   end,
+})
+
+local Input = Tab:CreateInput({
+   Name = "JumpPower",
+   PlaceholderText = "Input Number",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(JP)
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = JP
+   end,
+})
+
+local Input = Tab:CreateInput({
+   Name = "Gravity",
+   PlaceholderText = "Input Number",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(GR)
+    game.workspace.Gravity = GR
+   end,
+})
+
+local Tab = Window:CreateTab("FE Scripts", 4483362458)
+
+local Section = Tab:CreateSection("FE Scripts")
+
+local Button = Tab:CreateButton({
+   Name = "FE Speed Coil",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/CJFabro8/Client-Things/main/Speed%20Coil'),true))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+
+local Tab = Window:CreateTab("Scripts", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Scripts")
+
+local Button = Tab:CreateButton({
+   Name = "Sword Aimbot Script (Press X To Activate)",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/bot'))()
+   
+  print("Executed Successfully")
+  
+   end,
+})
+
+
+
+local Tab = Window:CreateTab("Guis", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Guis")
+
+local Button = Tab:CreateButton({
+   Name = "Fly Gui V3",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "WalkSpeed And JumpPower GUI",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/dreampoopo/scripts/main/jailbreakspeedandjump", true))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Keyboard GUI",
+   Callback = function()
+   loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-keyboard-6975"))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Ez Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://scriptblox.com/raw/Ez-Hub_168"))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Costum Keyboard GUI",
+   Callback = function()
+   loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Custom-Keyboard-Gui-7916"))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+
+local Tab = Window:CreateTab("Admin Scripts", 4483362458)
+
+local Section = Tab:CreateSection("Scripts")
+
+local Button = Tab:CreateButton({
+   Name = "Infinite yield",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "IV Admin V3 FE",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua"))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Homebrew Admin",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/mgamingpro/HomebrewAdmin/master/Main'),true))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Cmd-X V2",
+   Callback = function()
+   loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-cmdx-V1-9-9f-5981"))()
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+local Tab = Window:CreateTab("Slap Battles", 4483362458)
+
+local Section = Tab:CreateSection("Slap Battles Script")
+
+local Button = Tab:CreateButton({
+   Name = "",
+   Callback = function()
+   
+    
+  print("Executed Successfully")
+  
+   end,
+})
+
+
+local Tab = Window:CreateTab("Settings/Extra", 4483362458)
+
+local Section = Tab:CreateSection("Settings/extra")
+
+local Input = Tab:CreateInput({
+   Name = "Kick ",
+   PlaceholderText = "Kick yourself with a costum reason",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(R1)
+   -- The function that takes place when the input is changed
+   -- The variable (Text) is a string for the value in the text box
+   game.Players.LocalPlayer:Kick(R1)
+   end,
+})
+
+local Input = Tab:CreateInput({
+   Name = "Print",
+   PlaceholderText = "Print Something in console",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(text)
+   -- The function that takes place when the input is changed
+   -- The variable (Text) is a string for the value in the text box
+   print(text")
+   end,
+})
